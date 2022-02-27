@@ -1,22 +1,22 @@
 package net.abidinozdurmaz.chess.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import net.abidinozdurmaz.chess.type.Color;
 import net.abidinozdurmaz.chess.type.PieceType;
 
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
+@AllArgsConstructor
 public class PieceDto {
+    protected PieceType pieceType;
+    @NotNull
     protected int locationX;
     protected int locationY;
     protected Color color;
-    protected PieceType pieceType;
 
-    public PieceDto(PieceType pieceType, int locationX, int locationY, Color color) {
-        this.pieceType = pieceType;
-        this.locationX = locationX;
-        this.locationY = locationY;
-        this.color = color;
-    }
+
 }
