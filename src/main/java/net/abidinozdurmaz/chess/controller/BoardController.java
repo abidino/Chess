@@ -7,6 +7,7 @@ import net.abidinozdurmaz.chess.type.Color;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/api")
 @RequiredArgsConstructor
 public class BoardController {
